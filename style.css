@@ -27,7 +27,7 @@ body {
 
 .header-text {
     font-size: 14px;
-    font-family: "KitSans", sans-serif;
+    font-family: "KitSans";
     text-align: right;
     line-height: 1.2;
 }
