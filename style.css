@@ -1,47 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    margin: 10px;
-    padding: 10px;
-    font-family: "Altivo";
+    margin: 50px 10%;
+    font-family: "Outfit", sans-serif;
     color:#394032;
 }
 
-.header {
+header {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 10px;
+    margin-bottom: 50px;
+    gap: 50px;
 }
 
 .logo-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-right: 10px;
-    padding: 60px;
+    gap: 5px;
 }
 
 .logo {
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
 }
 
-.header-text {
-    font-size: 14px;
-    font-family: "KitSans";
-    text-align: right;
-    line-height: 1.2;
+.logo-text {
+    font-family: "KitSans", sans-serif;
+    font-size: 18px;
+    line-height: 1;
 }
 
-.image-container img {
+.h-image-grid {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
+    gap: 10px;
+}
+
+.image1 { grid-area: 1/1/6/5; }
+.image2 { grid-area: 1/5/5/8; }
+.image3 { grid-area: 1/8/3/10; }
+.image4 { grid-area: 6/1/9/3; }
+.image5 { grid-area: 6/3/9/5; }
+.image6 { grid-area: 5/5/9/8; }
+.image7 { grid-area: 3/8/6/10; }
+.image8 { grid-area: 6/8/9/10; }
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-.graphique1 {
-    margin-top: 20px;
-    padding: 20px;
+@media (max-width: 1024px) {
+    .h-image-grid {
+        grid-template-columns: repeat(8,1fr);
+    }
 }
 
-.flourish-embed img {
+@media (max-width: 768px) {
+    .h-image-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .logo-text {
+        font-size: 14px;
+    }
+}
+
+.movies {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+}
+
+.flourish-embed {
+    flex: 2;
+    position:relative;
     width: 100%;
-    height: auto;
+}
+
+.flourish-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.description {
+    display: flex;
 }
