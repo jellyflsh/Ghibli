@@ -1,56 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="title" content="Kodata, Datavisualisation of Studio Ghibli Movies">
+
     <title>KODATA</title>
 
-    <link rel="icon" type="image/png" href="images/kodama.png">
-    
+    <link rel="icon" type="image/png" href="ressources/header/kodama.png">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/aew7wsh.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <meta name="title" content="Kodata, Datavisualisation of Studio Ghibli Movies">
+    <script src="timeline.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="logo-container">
-            <img src="images/kodata.png" alt="Logo" class="logo">
+            <img src="ressources/header/kodata.png" alt="Logo" class="logo">
             <p class="logo-text">Data Visualisation of</br>Studio Ghibli Movies</p>
         </div>
         <div class="h-image-grid">
-            <div class="image image1"><img src="images/mononoke.jpg" alt="princess-mononoke"></div>
-            <div class="image image2"><img src="images/ponyo.jpg" alt="ponyo"></div>
-            <div class="image image3"><img src="images/lucioles.jpg" alt="grave-fireflies"></div>
-            <div class="image image4"><img src="images/kiki.jpg" alt="kiki-delivery-service"></div>
-            <div class="image image5"><img src="images/porco.jpg" alt="porco-rosso"></div>
-            <div class="image image6"><img src="images/heron.jpg" alt="boy-and-heron"></div>
-            <div class="image image7"><img src="images/chihiro.jpg" alt="spirited-away"></div>
-            <div class="image image8"><img src="images/howl.jpg" alt="howls-moving-castle"></div>
+            <div class="image image1"><img src="ressources/header/mononoke.jpg" alt="princess-mononoke"></div>
+            <div class="image image2"><img src="ressources/header/ponyo.jpg" alt="ponyo"></div>
+            <div class="image image3"><img src="ressources/header/lucioles.jpg" alt="grave-fireflies"></div>
+            <div class="image image4"><img src="ressources/header/kiki.jpg" alt="kiki-delivery-service"></div>
+            <div class="image image5"><img src="ressources/header/porco.jpg" alt="porco-rosso"></div>
+            <div class="image image6"><img src="ressources/header/heron.jpg" alt="boy-and-heron"></div>
+            <div class="image image7"><img src="ressources/header/chihiro.jpg" alt="spirited-away"></div>
+            <div class="image image8"><img src="ressources/header/howl.jpg" alt="howls-moving-castle"></div>
         </div>
     </header>
-    
+
     <div class="presentation">
         <div class="p-text">
             <p>
-                Dans le cadre d'un projet d'études de formation en Humanités Numériques, les étudiant(e)s de l'Université Paris 8 ont pour objectif de créer un site web de Data Visualisation.
+                Dans le cadre d'un projet d'études de formation en Humanités Numériques, les étudiant(e)s de
+                l'Université Paris 8</br>ont pour objectifde créer un site web de Data Visualisation.
+            </p>
+        </div>
+
+        <div class="p-text2">
+            <p>
+                Voici les Data Visualisation...
             </p>
         </div>
     </div>
 
-    <section class="movies">
-        <div class="description">
-            <p> Sypnosis of every Ghibli Movies</p>
+    <section class="timeline-section">
+        <div class="timeline-title">
+            <h2>Ghibli Movies Timeline</h2>
         </div>
-        <div class="flourish-embed flourish-cards" data-src="visualisation/20255715">
-            <script src="https://public.flourish.studio/resources/embed.js"></script>
-            <noscript><img src="https://public.flourish.studio/visualisation/20255715/thumbnail" width="100%" alt="cards visualization" /></noscript>
-        </div>
+        <section class="timeline-content">
+            <div class="text-left">
+                <p> Le Studio Ghibli, fondé en 1985 par Hayao Miyazaki et Isao Takahata, est rapidement devenu un
+                    pionnier de l'animation japonaise et un emblème du cinéma d'animation mondial. La filmographie du
+                    studio se distingue par sa diversité de styles et de thèmes, allant de récits fantastiques à des
+                    drames poignants, en passant par des œuvres plus introspectives. Voici un aperçu de la chronologie
+                    de ses films majeurs, de sa création à aujourd’hui.</p>
+            </div>
+
+            <div class="timeline-gallery">
+                <div class="gallery-container">
+                    <!-- Galeries d'images -->
+                    <div class="gallery-images">
+                        <div class="poster-img" data-year="1984" data-info="Nausicaä of the Valley of the Wind">
+                            <img src="https://image.tmdb.org/t/p/w1280/e7lGq33m7ZkE5RRpIQclk6Fjwc8.jpg"
+                                alt="Nausicaä of the Valley of the Wind">
+                        </div>
+                        <div class="poster-img" data-year="1986" data-info="Castle in the Sky">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg"
+                                alt="Nausicaä of the Valley of the Wind">
+                        </div>
+
+                        <div class="poster-img" data-year="1988" data-info="My Neighbor Totoro">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
+                                alt="My Neighbor Totoro">
+                        </div>
+                        <div class="poster-img" data-year="1988" data-info="Grave of the Fireflies">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/qG3RYlIVpTYclR9TYIsy8p7m7AT.jpg"
+                                alt="Grave of the Fireflies">
+                        </div>
+                        <div class="poster-img" data-year="1989" data-info="Kiki's Delivery Service">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7nO5DUMnGUuXrA4r2h6ESOKQRrx.jpg"
+                                alt="Kiki's Delivery Service">
+                        </div>
+                        <div class="poster-img" data-year="1991" data-info="Only Yesterday">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/xjJU6rwzLX7Jk8HFQfVW6H5guMC.jpg"
+                                alt="Only Yesterday">
+                        </div>
+                        <div class="poster-img" data-year="1992" data-info="Porco Rosso">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/byKAndF6KQSDpGxp1mTr23jPbYp.jpg"
+                                alt="Porco Rosso">
+                        </div>
+                        <div class="poster-img" data-year="1994" data-info="Pom Poko">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/kowo9E1e1JcWLXj9cCvAOFZcy5n.jpg"
+                                alt="PomPoko">
+                        </div>
+                        <div class="poster-img" data-year="1994" data-info="Ocean Waves">
+                            <img src="https://www.themoviedb.org/t/p/w1280/fSR1LLMIJZ6WcQEkM82yKy4F9vQ.jpg"
+                                alt="Ocean Waves">
+                        </div>
+                        <div class="poster-img" data-year="1995" data-info="Whisper of the Heart">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/5E3Hvbu0bg38ouYf6chGftVGqZ7.jpg"
+                                alt="Whisper of the Heart">
+                        </div>
+                        <div class="poster-img" data-year="1997" data-info="Princess Mononoke">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg"
+                                alt="Princess Mononoke">
+                        </div>
+                        <div class="poster-img" data-year="1999" data-info="My Neighbors the Yamadas">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wTGuHmMIBBgKakY80J1D52VvQKI.jpg"
+                                alt="My Neighbors the Yamadas">
+                        </div>
+                        <div class="poster-img" data-year="2001" data-info="Spirited Away">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
+                                alt="Spirited Away">
+                        </div>
+                        <div class="poster-img" data-year="2002" data-info="The Cat Returns">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/avPMO5cnaGHgLaNiAIhy33WoQLm.jpg"
+                                alt="The Cat Returns">
+                        </div>
+                        <div class="poster-img" data-year="2004" data-info="Howl's Moving Castle">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/TkTPELv4kC3u1lkloush8skOjE.jpg"
+                                alt="Howl's Moving Castle">
+                        </div>
+                        <div class="poster-img" data-year="2006" data-info="Tales from Earthsea">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/67yYwCPq7NbxSF6BIIXCMD34sY0.jpg"
+                                alt="Tales from Earthsea">
+                        </div>
+                        <div class="poster-img" data-year="2008" data-info="Ponyo">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/mikKSEdk5kLhflWXbp4S5mmHsDo.jpg"
+                                alt="Ponyo">
+                        </div>
+                        <div class="poster-img" data-year="2010" data-info="The Secret World of Arietty">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/oc2OB2KDmSRDMelKEAA1n4YRQL0.jpg"
+                                alt="The Secret World of Arietty">
+                        </div>
+                        <div class="poster-img" data-year="2011" data-info="From Up on Poppy Hill">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rRLYX4RZIyloHSJwvZKAhphAjiB.jpg"
+                                alt="From Up on Poppy Hill">
+                        </div>
+                        <div class="poster-img" data-year="2013" data-info="The Wind Rises">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/jfwSexzlIzaOgxP9A8bTA6t8YYb.jpg"
+                                alt="The Wind Rises">
+                        </div>
+                        <div class="poster-img" data-year="2013" data-info="The Tale of the Princess Kaguya">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/mWRQNlWXYYfd2z4FRm99MsgHgiA.jpg"
+                                alt="The Tale of the Princess Kaguya">
+                        </div>
+                        <div class="poster-img" data-year="2014" data-info="When Marnie Was There">
+                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg"
+                                alt="When Marnie Was There">
+                        </div>
+                        <div class="poster-img" data-year="2023" data-info="The Boy and the Heron">
+                            <img src="https://image.tmdb.org/t/p/w1280/f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
+                                alt="The Boy and the Heron">
+                        </div>
+                    </div>
+
+                    <div class="timeline-dates">
+                        <span class="start-date">1984</span>
+                        <div class="timeline-line"></div>
+                        <span class="end-date">2023</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </section>
 
-
+    <footer>
+        <div class="footer">
+            <small>Copyright © Humanités Numériques - CEN</br>Eya et Justine</small>
+        </div>
+    </footer>
 </body>
+
 </html>
