@@ -12,8 +12,9 @@ html {
 /* Base Styles */
 body {
     font-family: "Outfit", sans-serif;
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
+    line-height: 1.5;
     transition: background-color 0.3s ease;
 }
 
@@ -33,6 +34,15 @@ body::before {
 h2 {
     font-family: "KitSans";
     font-size: 2.5rem;
+    line-height: 1.2;
+    color: #D6E6B2;
+}
+
+h3 {
+    font-family: "KitSans";
+    font-size: 2rem;
+    line-height: 1.2;
+    color: #D6E6B2;
 }
 
 /* Header */
@@ -196,7 +206,7 @@ header {
 }
 
 
-/* Menu */
+/* Menu hamburger*/
 .menu-barre {
     display: flex;
     flex-direction: column;
@@ -214,7 +224,7 @@ header {
 .bar {
     width: 100%;
     height: 4px;
-    background-color: #D6E6B2;
+    background-color: #BC4749;
     border-radius: 2px;
     cursor: pointer;
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -235,7 +245,7 @@ header {
     width: 50%;
 }
 
-/* Cacher le menu */
+/* Cacher le hamburger */
 .menu-barre.hidden {
     transform: translateY(-100%);
     opacity: 0;
@@ -248,10 +258,9 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px;
+    width: 100%;
     height: 100vh;
-    background-color: #f2fbe0cd;
-    color: #fff;
+    background-color: #F2FBE0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -263,7 +272,7 @@ header {
 /* Menu visible */
 .popup-menu.open {
     transform: translateX(0);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Liste des liens */
@@ -322,28 +331,37 @@ section.presentation-section {
     color: #394032;
 }
 
+.p-titre h2 {
+    color: #BC4749;
+}
+
 .p-text {
     margin-top: 2rem;
     max-width: 70%;
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 /* Timeline style */
 section.timeline-section {
     display: flex;
-    padding: 5rem;
-    margin-bottom: 10rem;
-    text-align: center;
-    height: 100vh;
+    padding: 10rem;
 }
 
 #timeline {
     background-color: #394032;
 }
 
-.text-left {
-    color: white;
+.timeline-title {
+    padding: 0 2rem 0;
+}
+
+.timeline-text {
+    width: 80%;
+}
+
+.flourish-cards {
+    width: 100%;
 }
 
 
@@ -351,9 +369,7 @@ section.timeline-section {
 section.bubbles-section {
     display: flex;
     flex-direction: column;
-    padding: 10rem;
-    margin-bottom: 10rem;
-    height: 100vh;
+    padding: 5rem;
 }
 
 .bubble-content {
@@ -379,9 +395,7 @@ section.bubbles-section {
 section.budget-revenue {
     display: flex;
     flex-direction: column;
-    padding: 10rem;
-    margin-bottom: 10rem;
-    height: 100vh;
+    padding: 5rem;
 }
 
 .budget-content {
@@ -389,18 +403,17 @@ section.budget-revenue {
     justify-content: space-evenly;
 }
 
-.budget-title {
-    padding: 0 0 2rem;
+.budget-text {
+    width: 40%;
     align-self: center;
 }
 
-.budget-text {
-    width: 40%;
-    align-self: end;
+.budget-text h3 {
+    padding: 0 0 2rem;
 }
 
 .flourish-chart {
-    width: 40%;
+    width: 30%;
 }
 
 /* pied de page */
