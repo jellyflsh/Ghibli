@@ -6,8 +6,8 @@ let isMenuOpen = false; // État du menu (ouvert/fermé)
 // Fonction pour changer la couleur de fond du body en fonction de la section
 function changeBackgroundColor(sectionId) {
     const sectionColors = {
-        'presentation': '#ffffff', // couleur de la section présentation
-        'timeline': '#394032', // couleur de la section timeline
+        'presentation': '#ffffff', // Couleur de la section présentation
+        'timeline': '#394032', // Couleur de la section timeline
     };
 
     const color = sectionColors[sectionId];
@@ -50,14 +50,20 @@ const observer = new IntersectionObserver((entries) => {
 
         if (entry.isIntersecting) {
             isAnySectionVisible = true;
-            section.classList.add('visible'); // Activer l'animation de fade-in
-            changeBackgroundColor(section.id); // Changer la couleur en fonction de l'ID
+
+            // Ajoute la classe 'visible' pour l'animation si elle ne l'a pas déjà
+            if (!section.classList.contains('visible')) {
+                section.classList.add('visible');
+            }
+
+            changeBackgroundColor(section.id); // Changer la couleur de fond
         } else {
-            section.classList.remove('visible'); // Réinitialisation après transition
+            // Supprimez cette ligne pour empêcher la réinitialisation de la visibilité :
+            // section.classList.remove('visible');
         }
     });
 
-    // Si aucune section n'est visible (par exemple en haut de la page), appliquer Présentation
+    // Si aucune section n'est visible (par exemple, en haut de la page), appliquer Présentation
     if (!isAnySectionVisible && window.scrollY < 50) {
         changeBackgroundColor('presentation');
     }
@@ -65,6 +71,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observer les sections Présentation et Timeline
 sectionsToAnimate.forEach(section => observer.observe(section));
+
 
 // Écouteurs d'événements pour scroll et menu
 window.addEventListener('scroll', handleScroll);
