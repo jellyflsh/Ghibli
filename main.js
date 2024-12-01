@@ -39,7 +39,7 @@ function toggleMenu() {
 }
 
 // Observer uniquement les sections Présentation et Timeline
-const sectionsToAnimate = document.querySelectorAll('.presentation, .timeline-section');
+const sectionsToAnimate = document.querySelectorAll('.presentation-section, .timeline-section');
 
 // Création de l'observateur pour détecter les sections visibles
 const observer = new IntersectionObserver((entries) => {
