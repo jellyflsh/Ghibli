@@ -196,7 +196,7 @@ header {
 }
 
 
-/* Menu hamburger*/
+/* Menu */
 .menu-barre {
     display: flex;
     flex-direction: column;
@@ -235,7 +235,7 @@ header {
     width: 50%;
 }
 
-/* Cacher le hamburger */
+/* Cacher le menu */
 .menu-barre.hidden {
     transform: translateY(-100%);
     opacity: 0;
