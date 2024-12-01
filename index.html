@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="https://use.typekit.net/aew7wsh.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="timeline.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <div class="logo-container">
             <img src="images/kodata.png" alt="Logo" class="logo">
             <p class="logo-text">Data Visualisation of</br>Studio Ghibli Movies</p>
@@ -33,151 +33,108 @@
             <div class="image image7"><img src="images/chihiro.jpg" alt="spirited-away"></div>
             <div class="image image8"><img src="images/howl.jpg" alt="howls-moving-castle"></div>
         </div>
+        <div class="popup-menu">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#timeline">Chronologie</a></li>
+                <li><a href="#genres">Par genres</a></li>
+                <li><a href="#budget-revenue">Budgets et revenues</a></li>
+                <li><a href="#color-palette">Palette de Couleur</a></li>
+                <li><a href="#spotify">Classement Spotify</a></li>
+            </ul>
+        </div>
     </header>
-
-    <div class="presentation">
-        <div class="p-text">
-            <p>
-                Dans le cadre d'un projet d'études de formation en Humanités Numériques, les étudiant(e)s de
-                l'Université Paris 8</br>ont pour objectifde créer un site web de Data Visualisation.
-            </p>
-        </div>
-
-        <div class="p-text2">
-            <p>
-                Voici les Data Visualisation...
-            </p>
-        </div>
-    </div>
-
-    <section class="timeline-section">
-        <div class="timeline-title">
-            <h2>Ghibli Movies Timeline</h2>
-        </div>
-        <section class="timeline-content">
-            <div class="text-left">
-                <p> Le Studio Ghibli, fondé en 1985 par Hayao Miyazaki et Isao Takahata, est rapidement devenu un
-                    pionnier de l'animation japonaise et un emblème du cinéma d'animation mondial. La filmographie du
-                    studio se distingue par sa diversité de styles et de thèmes, allant de récits fantastiques à des
-                    drames poignants, en passant par des œuvres plus introspectives. Voici un aperçu de la chronologie
-                    de ses films majeurs, de sa création à aujourd’hui.</p>
-            </div>
-
-            <div class="timeline-gallery">
-                <div class="gallery-container">
-                    <!-- Galeries d'images -->
-                    <div class="gallery-images">
-                        <div class="poster-img" data-year="1984" data-info="Nausicaä of the Valley of the Wind">
-                            <img src="https://image.tmdb.org/t/p/w1280/e7lGq33m7ZkE5RRpIQclk6Fjwc8.jpg"
-                                alt="Nausicaä of the Valley of the Wind">
-                        </div>
-                        <div class="poster-img" data-year="1986" data-info="Castle in the Sky">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg"
-                                alt="Nausicaä of the Valley of the Wind">
-                        </div>
-
-                        <div class="poster-img" data-year="1988" data-info="My Neighbor Totoro">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rtGDOeG9LzoerkDGZF9dnVeLppL.jpg"
-                                alt="My Neighbor Totoro">
-                        </div>
-                        <div class="poster-img" data-year="1988" data-info="Grave of the Fireflies">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/qG3RYlIVpTYclR9TYIsy8p7m7AT.jpg"
-                                alt="Grave of the Fireflies">
-                        </div>
-                        <div class="poster-img" data-year="1989" data-info="Kiki's Delivery Service">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/7nO5DUMnGUuXrA4r2h6ESOKQRrx.jpg"
-                                alt="Kiki's Delivery Service">
-                        </div>
-                        <div class="poster-img" data-year="1991" data-info="Only Yesterday">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/xjJU6rwzLX7Jk8HFQfVW6H5guMC.jpg"
-                                alt="Only Yesterday">
-                        </div>
-                        <div class="poster-img" data-year="1992" data-info="Porco Rosso">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/byKAndF6KQSDpGxp1mTr23jPbYp.jpg"
-                                alt="Porco Rosso">
-                        </div>
-                        <div class="poster-img" data-year="1994" data-info="Pom Poko">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/kowo9E1e1JcWLXj9cCvAOFZcy5n.jpg"
-                                alt="PomPoko">
-                        </div>
-                        <div class="poster-img" data-year="1994" data-info="Ocean Waves">
-                            <img src="https://www.themoviedb.org/t/p/w1280/fSR1LLMIJZ6WcQEkM82yKy4F9vQ.jpg"
-                                alt="Ocean Waves">
-                        </div>
-                        <div class="poster-img" data-year="1995" data-info="Whisper of the Heart">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/5E3Hvbu0bg38ouYf6chGftVGqZ7.jpg"
-                                alt="Whisper of the Heart">
-                        </div>
-                        <div class="poster-img" data-year="1997" data-info="Princess Mononoke">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/jHWmNr7m544fJ8eItsfNk8fs2Ed.jpg"
-                                alt="Princess Mononoke">
-                        </div>
-                        <div class="poster-img" data-year="1999" data-info="My Neighbors the Yamadas">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/wTGuHmMIBBgKakY80J1D52VvQKI.jpg"
-                                alt="My Neighbors the Yamadas">
-                        </div>
-                        <div class="poster-img" data-year="2001" data-info="Spirited Away">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg"
-                                alt="Spirited Away">
-                        </div>
-                        <div class="poster-img" data-year="2002" data-info="The Cat Returns">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/avPMO5cnaGHgLaNiAIhy33WoQLm.jpg"
-                                alt="The Cat Returns">
-                        </div>
-                        <div class="poster-img" data-year="2004" data-info="Howl's Moving Castle">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/TkTPELv4kC3u1lkloush8skOjE.jpg"
-                                alt="Howl's Moving Castle">
-                        </div>
-                        <div class="poster-img" data-year="2006" data-info="Tales from Earthsea">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/67yYwCPq7NbxSF6BIIXCMD34sY0.jpg"
-                                alt="Tales from Earthsea">
-                        </div>
-                        <div class="poster-img" data-year="2008" data-info="Ponyo">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/mikKSEdk5kLhflWXbp4S5mmHsDo.jpg"
-                                alt="Ponyo">
-                        </div>
-                        <div class="poster-img" data-year="2010" data-info="The Secret World of Arietty">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/oc2OB2KDmSRDMelKEAA1n4YRQL0.jpg"
-                                alt="The Secret World of Arietty">
-                        </div>
-                        <div class="poster-img" data-year="2011" data-info="From Up on Poppy Hill">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/rRLYX4RZIyloHSJwvZKAhphAjiB.jpg"
-                                alt="From Up on Poppy Hill">
-                        </div>
-                        <div class="poster-img" data-year="2013" data-info="The Wind Rises">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/jfwSexzlIzaOgxP9A8bTA6t8YYb.jpg"
-                                alt="The Wind Rises">
-                        </div>
-                        <div class="poster-img" data-year="2013" data-info="The Tale of the Princess Kaguya">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/mWRQNlWXYYfd2z4FRm99MsgHgiA.jpg"
-                                alt="The Tale of the Princess Kaguya">
-                        </div>
-                        <div class="poster-img" data-year="2014" data-info="When Marnie Was There">
-                            <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/vug1dvDI1tSa60Z8qjCuUE7ntkO.jpg"
-                                alt="When Marnie Was There">
-                        </div>
-                        <div class="poster-img" data-year="2023" data-info="The Boy and the Heron">
-                            <img src="https://image.tmdb.org/t/p/w1280/f4oZTcfGrVTXKTWg157AwikXqmP.jpg"
-                                alt="The Boy and the Heron">
-                        </div>
-                    </div>
-
-                    <div class="timeline-dates">
-                        <span class="start-date">1984</span>
-                        <div class="timeline-line"></div>
-                        <span class="end-date">2023</span>
-                    </div>
-                </div>
+    <main>
+        <section class="presentation" id="presentation">
+            <div class="p-text-container">
+                <h2 class="p-titre">Présentation du Projet</h2>
+                <p class="p-text">
+                    Dans le cadre de notre projet de formation en Humanités Numériques à l'Université Paris 8, les
+                    étudiant(e)s ont pour objectif de créer un site web dédié à la visualisation de données. Ce
+                    projet a été réalisé par XXX et XXX et porte sur l'univers des films Ghibli.
+                </p>
+                <p class="p-text">
+                    Pour ce faire, nous avons récupéré des jeux de données provenant de Wikidata et Kaggle, ainsi qu'une
+                    API permettant
+                    d'extraire les descriptions des films. Ensuite, nous avons conçu et intégré des graphiques
+                    interactifs pour
+                    visualiser ces données à l'aide de Flourish et de JavaScript.
+                </p>
             </div>
         </section>
 
-    </section>
+        <section class="timeline-section" id="timeline">
+            <div class="timeline-title">
+                <h2>Ghibli Movies Timeline</h2>
+            </div>
+            <section class="timeline-content">
+                <div class="text-left">
+                    <p> Le Studio Ghibli, fondé en 1985 par Hayao Miyazaki et Isao Takahata, est rapidement devenu un
+                        pionnier de l'animation japonaise et un emblème du cinéma d'animation mondial. La filmographie
+                        du
+                        studio se distingue par sa diversité de styles et de thèmes, allant de récits fantastiques à des
+                        drames poignants, en passant par des œuvres plus introspectives. Voici un aperçu de la
+                        chronologie
+                        de ses films majeurs, de sa création à aujourd’hui.</p>
+                </div>
+
+                <div class="timeline-gallery">
+                    <div class="gallery-container">
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+        <section class="bubbles-chart">
+            <div class="chart-text">
+                <p> Les films Ghibli sont avant tout ancrés dans le genre de la fantasy, un univers où l'imaginaire et
+                    la réalité se rencontrent pour offrir aux spectateurs une véritable échappée belle. À travers des
+                    paysages enchâssés de magie, de créatures fantastiques et de récits merveilleux, ces films
+                    permettent de s'évader du quotidien et de plonger dans des mondes où tout est possible. Loin des
+                    préoccupations de la vie réelle, ils offrent une parenthèse onirique, invitant à rêver et à explorer
+                    des horizons inaccessibles. C'est cette capacité à susciter l'émerveillement et à transporter
+                    l'esprit vers des contrées fantastiques qui fait des œuvres de Ghibli des trésors de cinéma, où
+                    chaque aventure devient un voyage intérieur, un rêve éveillé.</p>
+            </div>
+            <div class="chart">
+                <canvas id="bubbleChart" width="600" height="600"></canvas>
+            </div>
+        </section>
+
+
+        <section class="budget-revenue">
+            <div class="budget-text">
+                <p>
+                    L'essor international des films Ghibli est un phénomène marquant dans l'histoire du cinéma. En
+                    l'espace de quelques décennies, ces œuvres sont devenues bien plus que des succès au Japon ; elles
+                    ont transcendé les frontières culturelles et géographiques pour toucher un public mondial. Ce
+                    rayonnement global a non seulement permis aux studios Ghibli de connaître des revenus bien au-delà
+                    de ceux générés par le Japon, mais a également renforcé leur position de leader dans le domaine de
+                    l'animation.
+                    Le succès mondial de Ghibli a créé des attentes gigantesques autour de chaque nouvelle sortie. Avec
+                    Le Garçon et le Héron, les spectateurs attendaient non seulement une œuvre de grande qualité, mais
+                    aussi une expérience qui repousse les limites de l'imaginaire. Cette impatience mondiale montre à
+                    quel point Ghibli est devenu synonyme de créativité exceptionnelle et de récits qui touchent
+                    profondément les publics de toutes cultures.
+                </p>
+            </div>
+            <div class="flourish-embed flourish-chart" data-src="visualisation/20431681">
+                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                        src="https://public.flourish.studio/visualisation/20431681/thumbnail" width="100%"
+                        alt="chart visualization" /></noscript>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div class="footer">
-            <small>Copyright © Humanités Numériques - CEN</br>Eya et Justine</small>
+            <small>Copyright © Humanités Numériques - CEN</br>XXX et XXX</small>
         </div>
     </footer>
+
+    <script src="main.js"></script>
+    <script src="bubbles.js"></script>
 </body>
 
 </html>
