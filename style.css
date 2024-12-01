@@ -30,6 +30,11 @@ body::before {
 
 }
 
+h2 {
+    font-family: "KitSans";
+    font-size: 2.5rem;
+}
+
 /* Header */
 header {
     position: relative;
@@ -245,7 +250,7 @@ header {
     right: 0;
     width: 300px;
     height: 100vh;
-    background-color: #F2FBE0;
+    background-color: #f2fbe0cd;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -284,21 +289,21 @@ header {
 }
 
 /* animation section */
-.presentation,
+.presentation-section,
 .timeline-section {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5 ease-out;
 }
 
-.presentation.visible,
+.presentation-section.visible,
 .timeline-section.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
 /* Texte de presentation*/
-section.presentation {
+section.presentation-section {
     display: flex;
     justify-content: center;
     padding: 5rem;
@@ -306,7 +311,7 @@ section.presentation {
     height: 100vh;
 }
 
-.p-text-container {
+.presentation-text {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -317,13 +322,8 @@ section.presentation {
     color: #394032;
 }
 
-.p-titre {
-    text-align: left;
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-}
-
 .p-text {
+    margin-top: 2rem;
     max-width: 70%;
     text-align: center;
     line-height: 1.6;
@@ -348,32 +348,60 @@ section.timeline-section {
 
 
 /* BUBBLE CHART */
-section.bubbles-chart {
+section.bubbles-section {
     display: flex;
-    justify-content: space-between;
-    padding: 5rem;
+    flex-direction: column;
+    padding: 10rem;
     margin-bottom: 10rem;
     height: 100vh;
+}
+
+.bubble-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bubble-title {
+    padding: 0 0 2rem;
+}
+
+.bubble-text {
+    width: 40%;
+    align-self: center;
+}
+
+.flourish-bubble-chart {
+    width: 40%;
 }
 
 
 /*budget-revenue*/
 section.budget-revenue {
     display: flex;
-    justify-content: space-between;
-    padding: 5rem;
+    flex-direction: column;
+    padding: 10rem;
     margin-bottom: 10rem;
     height: 100vh;
 }
 
+.budget-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.budget-title {
+    padding: 0 0 2rem;
+    align-self: center;
+}
+
 .budget-text {
-    width: 60%;
+    width: 40%;
+    align-self: end;
 }
 
-.flourish-embed {
-    width: 100%;
+.flourish-chart {
+    width: 40%;
 }
-
 
 /* pied de page */
 .footer {
@@ -421,11 +449,6 @@ section.budget-revenue {
 
     .p-text-container {
         padding: 0 1rem;
-    }
-
-    .p-titre {
-        font-size: 2rem;
-        text-align: center;
     }
 
     .p-text {
