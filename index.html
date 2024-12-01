@@ -13,15 +13,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.typekit.net/aew7wsh.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <header id="home">
         <div class="header-container">
             <div class="logo-container">
-                <img src="images/kodata.png" alt="Logo" class="logo">
+                <img src="ressources/header/kodata.png" alt="Logo" class="logo">
                 <p class="logo-text">Data Visualisation of</br>Studio Ghibli Movies</p>
             </div>
             <div class="menu-barre">
@@ -52,22 +50,28 @@
             </div>
         </div>
     </header>
+
     <main>
-        <section class="presentation" id="presentation">
-            <div class="p-text-container">
-                <h2 class="p-titre">Présentation du Projet</h2>
-                <p class="p-text">
-                    Dans le cadre de notre projet de formation en Humanités Numériques à l'Université Paris 8, les
-                    étudiant(e)s ont pour objectif de créer un site web dédié à la visualisation de données. Ce
-                    projet a été réalisé par XXX et XXX et porte sur l'univers des films Ghibli.
-                </p>
-                <p class="p-text">
-                    Pour ce faire, nous avons récupéré des jeux de données provenant de Wikidata et Kaggle, ainsi qu'une
-                    API permettant
-                    d'extraire les descriptions des films. Ensuite, nous avons conçu et intégré des graphiques
-                    interactifs pour
-                    visualiser ces données à l'aide de Flourish et de JavaScript.
-                </p>
+        <section class="presentation-section" id="presentation">
+            <div class="presentation-text">
+                <div class="p-titre">
+                    <h2>PRÉSENTATION DU PROJET</h2>
+                </div>
+                <div class="p-text">
+                    <p>
+                        Dans le cadre de notre projet de formation en Humanités Numériques à l'Université Paris 8, les
+                        étudiant(e)s ont pour objectif de créer un site web dédié à la visualisation de données. Ce
+                        projet a été réalisé par XXX et XXX et porte sur l'univers des films Ghibli.
+                    </p>
+                    <p>
+                        Pour ce faire, nous avons récupéré des jeux de données provenant de Wikidata et Kaggle, ainsi
+                        qu'une
+                        API permettant
+                        d'extraire les descriptions des films. Ensuite, nous avons conçu et intégré des graphiques
+                        interactifs pour
+                        visualiser ces données à l'aide de Flourish et de JavaScript.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -87,59 +91,70 @@
                 </div>
 
                 <div class="timeline-gallery">
-                    <div class="gallery-container">
-                    </div>
- <div 
-              class="flourish-embed flourish-cards" data-src="visualisation/20488810">
-              <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img 
-            src="https://public.flourish.studio/visualisation/20488810/thumbnail" width="100%" 
-            alt="cards visualization" /></noscript>
-          </div>
-                    
+                    <div class="flourish-embed flourish-cards" data-src="visualisation/20488810"> <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20488810/thumbnail" width="100%"  alt="cards visualization" /></noscript>
                 </div>
             </section>
 
         </section>
 
-        <section class="bubbles-chart" id="genres">
-            <div class="chart-text">
-                <p> Les films Ghibli sont avant tout ancrés dans le genre de la fantasy, un univers où l'imaginaire et
-                    la réalité se rencontrent pour offrir aux spectateurs une véritable échappée belle. À travers des
-                    paysages enchâssés de magie, de créatures fantastiques et de récits merveilleux, ces films
-                    permettent de s'évader du quotidien et de plonger dans des mondes où tout est possible. Loin des
-                    préoccupations de la vie réelle, ils offrent une parenthèse onirique, invitant à rêver et à explorer
-                    des horizons inaccessibles. C'est cette capacité à susciter l'émerveillement et à transporter
-                    l'esprit vers des contrées fantastiques qui fait des œuvres de Ghibli des trésors de cinéma, où
-                    chaque aventure devient un voyage intérieur, un rêve éveillé.</p>
+        <section class="bubbles-section" id="genres">
+            <div class="bubble-title">
+                <h2>Les Principaux Genres présents dans les Films Ghibli</h2>
             </div>
-            <div class="flourish-embed flourish-bubble-chart" data-src="visualisation/20564916">
-                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
-                        src="https://public.flourish.studio/visualisation/20564916/thumbnail" width="100%"
-                        alt="bubble-chart visualization" /></noscript>
+            <div class="bubble-content">
+                <div class="bubble-text">
+                    <p> Les films Ghibli sont avant tout ancrés dans le genre de la Fantasy, un univers où
+                        l'imaginaire et
+                        la réalité se rencontrent pour offrir aux spectateurs une véritable échappée belle. À travers
+                        des
+                        paysages enchâssés de magie, de créatures fantastiques et de récits merveilleux, ces films
+                        permettent de s'évader du quotidien et de plonger dans des mondes où tout est possible. Loin des
+                        préoccupations de la vie réelle, ils offrent une parenthèse onirique, invitant à rêver et à
+                        explorer
+                        des horizons inaccessibles. C'est cette capacité à susciter l'émerveillement et à transporter
+                        l'esprit vers des contrées fantastiques qui fait des œuvres de Ghibli des trésors de cinéma, où
+                        chaque aventure devient un voyage intérieur, un rêve éveillé.</p>
+                </div>
+                <div class="flourish-embed flourish-bubble-chart" data-src="visualisation/20564916">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                            src="https://public.flourish.studio/visualisation/20564916/thumbnail"
+                            alt="bubble-chart visualization" /></noscript>
+                </div>
             </div>
         </section>
 
 
         <section class="budget-revenue" id="budget-revenue">
-            <div class="budget-text">
-                <p>
-                    L'essor international des films Ghibli est un phénomène marquant dans l'histoire du cinéma. En
-                    l'espace de quelques décennies, ces œuvres sont devenues bien plus que des succès au Japon ; elles
-                    ont transcendé les frontières culturelles et géographiques pour toucher un public mondial. Ce
-                    rayonnement global a non seulement permis aux studios Ghibli de connaître des revenus bien au-delà
-                    de ceux générés par le Japon, mais a également renforcé leur position de leader dans le domaine de
-                    l'animation.
-                    Le succès mondial de Ghibli a créé des attentes gigantesques autour de chaque nouvelle sortie. Avec
-                    Le Garçon et le Héron, les spectateurs attendaient non seulement une œuvre de grande qualité, mais
-                    aussi une expérience qui repousse les limites de l'imaginaire. Cette impatience mondiale montre à
-                    quel point Ghibli est devenu synonyme de créativité exceptionnelle et de récits qui touchent
-                    profondément les publics de toutes cultures.
-                </p>
+            <div class="budget-title">
+                <h2>Comparaison des films Ghibli selon leur budget et leurs revenus</h2>
             </div>
-            <div class="flourish-embed flourish-chart" data-src="visualisation/20431681">
-                <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
-                        src="https://public.flourish.studio/visualisation/20431681/thumbnail" width="100%"
-                        alt="chart visualization" /></noscript>
+            <div class="budget-content">
+                <div class="flourish-embed flourish-chart" data-src="visualisation/20431681">
+                    <script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img
+                            src="https://public.flourish.studio/visualisation/20431681/thumbnail"
+                            alt="chart visualization" /></noscript>
+                </div>
+                <div class="budget-text">
+                    <p>
+                        L'essor international des films Ghibli est un phénomène marquant dans l'histoire du cinéma. En
+                        l'espace de quelques décennies, ces œuvres sont devenues bien plus que des succès au Japon ;
+                        elles
+                        ont transcendé les frontières culturelles et géographiques pour toucher un public mondial. Ce
+                        rayonnement global a non seulement permis aux studios Ghibli de connaître des revenus bien
+                        au-delà
+                        de ceux générés par le Japon, mais a également renforcé leur position de leader dans le domaine
+                        de
+                        l'animation.
+                        Le succès mondial de Ghibli a créé des attentes gigantesques autour de chaque nouvelle sortie.
+                        Avec
+                        Le Garçon et le Héron, les spectateurs attendaient non seulement une œuvre de grande qualité,
+                        mais
+                        aussi une expérience qui repousse les limites de l'imaginaire. Cette impatience mondiale montre
+                        à
+                        quel point Ghibli est devenu synonyme de créativité exceptionnelle et de récits qui touchent
+                        profondément les publics de toutes cultures.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
@@ -151,10 +166,6 @@
     </footer>
 
     <script src="main.js"></script>
-    <script src="bubbles.js"></script>
- </div>
-         
-    
 </body>
 
 </html>
