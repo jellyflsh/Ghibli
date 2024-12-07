@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Signika:wght@300..700&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -44,12 +44,13 @@
             </div>
             <div class="popup-menu">
                 <ul>
-                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#home" onclick="changeBackgroundColor('#ffffff')">Accueil</a></li>
                     <li><a href="#timeline">Chronologie</a></li>
-                    <li><a href="#genres">Par genres</a></li>
-                    <li><a href="#budget-revenue">Budgets et revenues</a></li>
-                    <li><a href="#color-palette">Palette de Couleur</a></li>
-                    <li><a href="#spotify">Classement Spotify</a></li>
+                    <li><a href="#genres" onclick="changeBackgroundColor('#394032')">Par genres</a></li>
+                    <li><a href="#budget-revenue" onclick="changeBackgroundColor('#394032')">Budgets et revenues</a>
+                    </li>
+                    <li><a href="#color-palette" onclick="changeBackgroundColor('#394032')">Palette de Couleur</a></li>
+                    <li><a href="#spotify" onclick="changeBackgroundColor('#394032')">Classement Spotify</a></li>
                 </ul>
             </div>
         </div>
@@ -81,7 +82,7 @@
 
         <section class="timeline-section" id="timeline">
             <div class="timeline-title">
-                <h2 style="font-size: 4rem">MOVIES' TIMELINE</h2>
+                <h2 style="font-size: 3rem">MOVIES' TIMELINE</h2>
             </div>
             <div class="timeline-content">
                 <div class="flourish-embed flourish-cards" data-src="visualisation/20488810">
@@ -103,11 +104,10 @@
         </section>
 
         <section class="bubbles-section" id="genres">
-            <div class="bubble-title">
-                <h2>Les Principaux genres présents dans les films Ghibli</h2>
-            </div>
             <div class="bubble-content">
                 <div class="bubble-text">
+                    <h2>Les Principaux genres</h2>
+                    <h3>présents dans les films Ghibli</h3>
                     <p> Les films Ghibli sont avant tout ancrés dans le genre de la Fantasy, un univers où
                         l'imaginaire et
                         la réalité se rencontrent pour offrir aux spectateurs une véritable échappée belle. À travers
@@ -166,8 +166,19 @@
 
         </section>
 
-        <section class="top-song">
-
+        <section class="top-song" id="spotify">
+            <div class="song-title">
+                <h2>Les morceaux les plus populaires de Ghibli</h2>
+            </div>
+            <div class="song-container"></div>
+            <div class="song-text">
+                <p>Le score de popularité sur Spotify, compris entre 0 et 100, reflète la popularité actuelle d'une
+                    piste.
+                    Il est basé sur le nombre d'écoutes récentes, les tendances de croissance, et l'engagement des
+                    utilisateurs (ajouts aux playlists, sauvegardes). Ce score mesure l'attractivité actuelle d'une
+                    chanson
+                    sur la plateforme.</p>
+            </div>
         </section>
     </main>
 
@@ -177,6 +188,7 @@
         </div>
     </footer>
 
+    <script src="top.js"></script>
     <script src="main.js"></script>
 </body>
 
