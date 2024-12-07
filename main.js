@@ -13,6 +13,8 @@ function changeBackgroundColor(sectionId) {
     const color = sectionColors[sectionId];
     if (color) {
         document.body.style.backgroundColor = color;
+        // Sauvegarde la couleur dans le localStorage
+        localStorage.setItem('backgroundColor', color);
     }
 }
 
@@ -72,7 +74,17 @@ const observer = new IntersectionObserver((entries) => {
 // Observer les sections Présentation et Timeline
 sectionsToAnimate.forEach(section => observer.observe(section));
 
-
 // Écouteurs d'événements pour scroll et menu
 window.addEventListener('scroll', handleScroll);
 menuBarre.addEventListener('click', toggleMenu);
+
+// Appliquer la couleur de fond sauvegardée au rechargement de la page
+window.onload = function () {
+    const savedColor = localStorage.getItem('backgroundColor');
+    if (savedColor) {
+        document.body.style.backgroundColor = savedColor;
+    } else {
+        // Si aucune couleur n'est sauvegardée, on applique celle de la section Présentation par défaut
+        changeBackgroundColor('presentation');
+    }
+};
