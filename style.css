@@ -258,7 +258,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     background-color: #F2FBE0;
     display: flex;
