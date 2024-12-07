@@ -107,7 +107,7 @@ header {
 .logo {
     animation: fadeLogo 1s ease-in-out forwards;
     opacity: 0;
-    max-width: 200px;
+    max-width: 180px;
     height: auto;
 }
 
@@ -116,7 +116,7 @@ header {
     animation-delay: 1s;
     opacity: 0;
     font-family: "Unbounded", sans-serif;
-    font-size: 18px;
+    font-size: 13px;
     color: #394032;
     line-height: 1;
 }
@@ -227,12 +227,12 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 40px;
+    width: 30px;
     height: 30px;
     cursor: pointer;
     position: fixed;
     top: 30px;
-    right: 5vw;
+    right: 2vw;
     z-index: 3;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
@@ -247,21 +247,22 @@ header {
 }
 
 
-/* Quand le menu est ouvert (ajout de la classe "open") */
+
 .menu-barre.open .bar:nth-child(1) {
-    width: 50%;
-    transform: translateX(20px);
+    transform: rotate(45deg) translate(5px, 9px);
+    width: 100%;
 }
 
 .menu-barre.open .bar:nth-child(2) {
-    width: 70%;
-    transform: translateX(10px);
+    opacity: 0;
+    transform: scale(0.2);
 }
 
 .menu-barre.open .bar:nth-child(3) {
-    width: 50%;
-    transform: translateX(20px);
+    transform: rotate(-45deg) translate(5px, -9px);
+    width: 100%;
 }
+
 
 /* Cacher le hamburger */
 .menu-barre.hidden {
@@ -276,32 +277,33 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 20rem;
+    width: 16vw;
     height: 100vh;
     background-color: #f2fbe0f2;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform 0.5s ease;
+    text-align: right;
+    padding-right: 2.5vw;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
     z-index: 2;
 }
 
 /* Menu visible */
 .popup-menu.open {
-    transform: translateX(0);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* Liste des liens */
 .popup-menu ul {
     list-style: none;
     padding: 0;
-    margin-top: 100px;
+    margin-top: 10vh;
 }
 
 .popup-menu ul li {
-    margin: 20px 0;
+    margin: 2vh 0;
 }
 
 .popup-menu ul li a {
@@ -320,7 +322,7 @@ header {
 .timeline-section {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5 ease-out;
+    transition: opacity 0.3s ease-out, transform 0.5 ease-out;
 }
 
 .presentation-section.visible,
@@ -533,6 +535,21 @@ section.top-song {
     color: #ffffff;
 }
 
+section.bonus {
+    padding: 5rem;
+}
+
+.bonus-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spotify-player {
+    display: flex;
+    justify-content: center;
+}
 
 
 
