@@ -1,15 +1,15 @@
 // Liste des chansons avec album, titre, popularité et image
 const songs = [
-    { title: "Merry-Go-Round of Life", album: "FREEDOM PIANO STORIES 4", popularity: 66, img: "/images/freedom.jpg" },
-    { title: "The Flower Garden", album: "Howl's Moving Castle Soundtrack", popularity: 64, img: "/images/hmcs.jpg" },
-    { title: "One Summer Day", album: "Spirited Away Soundtrack", popularity: 63, img: "/images/sas.jpg" },
-    { title: "You're in Love", album: "Howl's Moving Castle Soundtrack", popularity: 61, img: "/images/hmcs.jpg" },
-    { title: "Opening Song", album: "Howl's Moving Castle Soundtrack", popularity: 56, img: "/images/hmcs.jpg" },
-    { title: "A Walk in the Skies", album: "Howl's Moving Castle Soundtrack", popularity: 54, img: "/images/hmcs.jpg" },
-    { title: "The Sixth Station", album: "Spirited Away Soundtrack", popularity: 54, img: "/images/sas.jpg" },
-    { title: "Merry-Go-Round of Life", album: "A Symphonic Celebration", popularity: 53, img: "/images/symphonic.jpg" },
-    { title: "Day Of The River", album: "Spirited Away Soundtrack", popularity: 53, img: "/images/sas.jpg" },
-    { title: "In the Rain", album: "Howl's Moving Castle Soundtrack", popularity: 50, img: "/images/hmcs.jpg" }
+    { title: "Merry-Go-Round of Life", album: "FREEDOM PIANO STORIES 4", popularity: 66, img: "images/freedom.jpg" },
+    { title: "The Flower Garden", album: "Howl's Moving Castle Soundtrack", popularity: 64, img: "images/hmcs.jpg" },
+    { title: "One Summer Day", album: "Spirited Away Soundtrack", popularity: 63, img: "images/sas.jpg" },
+    { title: "You're in Love", album: "Howl's Moving Castle Soundtrack", popularity: 61, img: "images/hmcs.jpg" },
+    { title: "Opening Song", album: "Howl's Moving Castle Soundtrack", popularity: 56, img: "images/hmcs.jpg" },
+    { title: "A Walk in the Skies", album: "Howl's Moving Castle Soundtrack", popularity: 54, img: "images/hmcs.jpg" },
+    { title: "The Sixth Station", album: "Spirited Away Soundtrack", popularity: 54, img: "images/sas.jpg" },
+    { title: "Merry-Go-Round of Life", album: "A Symphonic Celebration", popularity: 53, img: "images/symphonic.jpg" },
+    { title: "Day Of The River", album: "Spirited Away Soundtrack", popularity: 53, img: "images/sas.jpg" },
+    { title: "In the Rain", album: "Howl's Moving Castle Soundtrack", popularity: 50, img: "images/hmcs.jpg" }
 ];
 
 const songContainer = document.querySelector('.song-container');
