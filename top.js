@@ -14,16 +14,18 @@ const songs = [
 
 const songContainer = document.querySelector('.song-container');
 
-// Fonction pour afficher les chansons
 function displaySongs() {
     songContainer.innerHTML = ''; // Vider le conteneur avant de remplir
 
-    // Diviser les chansons en deux colonnes (groupe 1 et groupe 2)
-    const firstColumnSongs = songs.slice(0, 5);  // 1er groupe de 5 chansons
+    // Diviser les chansons en deux colonnes
+    const firstColumnSongs = songs.slice(0, 5); // 1er groupe de 5 chansons
     const secondColumnSongs = songs.slice(5, 10); // 2ème groupe de 5 chansons
 
-    // Fonction pour afficher les chansons dans une colonne
-    function createColumn(songsArray) {
+    // Fonction pour créer une colonne
+    function createColumn(songsArray, columnClass) {
+        const column = document.createElement('div');
+        column.classList.add(columnClass); // Ajouter une classe de colonne
+
         songsArray.forEach((song, index) => {
             const songCard = document.createElement('div');
             songCard.classList.add('song-card');
@@ -42,15 +44,19 @@ function displaySongs() {
                 </div>
             `;
 
-            // Ajouter la carte au conteneur
-            songContainer.appendChild(songCard);
+            // Ajouter la carte à la colonne
+            column.appendChild(songCard);
         });
+
+        // Ajouter la colonne au conteneur
+        songContainer.appendChild(column);
     }
 
     // Créer les deux colonnes
-    createColumn(firstColumnSongs); // Première colonne (chansons 1 à 5)
-    createColumn(secondColumnSongs); // Deuxième colonne (chansons 6 à 10)
+    createColumn(firstColumnSongs, 'song-column'); // Première colonne
+    createColumn(secondColumnSongs, 'song-column'); // Deuxième colonne
 }
+
 
 // Initialisation
 displaySongs();
