@@ -22,17 +22,21 @@ function displaySongs() {
     const secondColumnSongs = songs.slice(5, 10); // 2ème groupe de 5 chansons
 
     // Fonction pour créer une colonne
-    function createColumn(songsArray, columnClass) {
+    function createColumn(songsArray, startIndex) {
         const column = document.createElement('div');
-        column.classList.add(columnClass); // Ajouter une classe de colonne
+        column.classList.add('song-column'); // Classe pour styliser chaque colonne
 
+        // Parcourir les chansons et construire les cartes
         songsArray.forEach((song, index) => {
             const songCard = document.createElement('div');
             songCard.classList.add('song-card');
 
+            // Utiliser l'index global (startIndex + index)
+            const globalIndex = startIndex + index + 1;
+
             // Ajouter le contenu à la carte
             songCard.innerHTML = `
-                <div class="ranking">${index + 1}</div>
+                <div class="ranking">${globalIndex}</div>
                 <img src="${song.img}" alt="Image de la chanson">
                 <div class="song-info">
                     <h4>${song.title}</h4>
@@ -48,14 +52,17 @@ function displaySongs() {
             column.appendChild(songCard);
         });
 
-        // Ajouter la colonne au conteneur
+        // Ajouter la colonne au conteneur principal
         songContainer.appendChild(column);
     }
 
-    // Créer les deux colonnes
-    createColumn(firstColumnSongs, 'song-column'); // Première colonne
-    createColumn(secondColumnSongs, 'song-column'); // Deuxième colonne
+    // Créer la première colonne avec un index de départ 0
+    createColumn(firstColumnSongs, 0);
+
+    // Créer la deuxième colonne avec un index de départ 5
+    createColumn(secondColumnSongs, 5);
 }
+
 
 
 // Initialisation
