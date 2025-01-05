@@ -347,7 +347,7 @@ section.presentation-section {
     display: flex;
     justify-content: center;
     padding: 5rem;
-    margin-bottom: 10rem;
+    margin-bottom: 10vh;
     height: 100vh;
 }
 
@@ -419,6 +419,7 @@ section.bubbles-section {
     flex-direction: column;
     padding: 5rem;
     height: 100vh;
+    margin-bottom: 10vh;
 }
 
 .bubble-content {
@@ -451,6 +452,7 @@ section.budget-revenue {
     flex-direction: column;
     padding: 5rem;
     height: 100vh;
+    margin-bottom: 50vh;
 }
 
 .budget-content {
@@ -475,7 +477,7 @@ section.budget-revenue {
 
 /*SONG Section*/
 section.top-song {
-    padding: 5vw;
+    padding: 5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -660,7 +662,7 @@ section.top-song {
     }
 
     .popup-menu ul li a {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     /*presentation*/
@@ -774,6 +776,10 @@ section.top-song {
         /* Empile les éléments dans une seule colonne sur mobile */
         align-items: center;
         /* Centrer les éléments */
+    }
+
+    .song-text {
+        width: 90%;
     }
 
 }
