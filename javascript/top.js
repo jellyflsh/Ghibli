@@ -16,16 +16,19 @@ function displaySongs() {
     const songContainer = document.querySelector('.song-container');
     songContainer.innerHTML = ''; // Réinitialiser le conteneur
 
+    // Trier les chansons par popularité décroissante
+    const sortedSongs = [...songs].sort((a, b) => b.popularity - a.popularity);
+
     // Créer la première rangée (Top 1)
     const top1Card = document.createElement('div');
     top1Card.classList.add('song-card', 'top-1');
     top1Card.innerHTML = `
         <div class="ranking">#1</div>
-        <img src="${songs[0].img}" alt="Image de ${songs[0].title}">
+        <img src="${sortedSongs[0].img}" alt="Image de ${sortedSongs[0].title}">
         <div class="song-info">
-            <h4>${songs[0].title}</h4>
-            <p>${songs[0].album}</p>
-            <span class="popularity">Popularité: ${songs[0].popularity}</span>
+            <h4>${sortedSongs[0].title}</h4>
+            <p>${sortedSongs[0].album}</p>
+            <span class="popularity">Popularité: ${sortedSongs[0].popularity}</span>
         </div>
     `;
     const topRow = document.createElement('div');
@@ -46,20 +49,22 @@ function displaySongs() {
         row.classList.add('song-row');
 
         rowIndexes.forEach(index => {
-            const song = songs[index]; // Récupérer la chanson basée sur l'index
-            const rank = index + 1; // Rank corresponds to the song's position
-            const songCard = document.createElement('div');
-            songCard.classList.add('song-card');
-            songCard.innerHTML = `
-                <div class="ranking">#${rank}</div>
-                <img src="${song.img}" alt="Image de ${song.title}">
-                <div class="song-info">
-                    <h4>${song.title}</h4>
-                    <p>${song.album}</p>
-                    <span class="popularity">Popularité: ${song.popularity}</span>
-                </div>
-            `;
-            row.appendChild(songCard);
+            if (index < sortedSongs.length) {
+                const song = sortedSongs[index]; // Récupérer la chanson triée par popularité
+                const rank = index + 1; // Rang réel
+                const songCard = document.createElement('div');
+                songCard.classList.add('song-card');
+                songCard.innerHTML = `
+                    <div class="ranking">#${rank}</div>
+                    <img src="${song.img}" alt="Image de ${song.title}">
+                    <div class="song-info">
+                        <h4>${song.title}</h4>
+                        <p>${song.album}</p>
+                        <span class="popularity">Popularité: ${song.popularity}</span>
+                    </div>
+                `;
+                row.appendChild(songCard);
+            }
         });
 
         songContainer.appendChild(row);
@@ -67,4 +72,6 @@ function displaySongs() {
 }
 
 // Initialisation
-displaySongs();
+document.addEventListener('DOMContentLoaded', () => {
+    displaySongs();
+});
