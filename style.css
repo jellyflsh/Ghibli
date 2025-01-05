@@ -373,6 +373,46 @@ section.presentation-section {
     line-height: 1.5;
 }
 
+/* Timeline style */
+section.timeline-section {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5rem;
+    height: 100vh;
+    background-color: #394032;
+}
+
+
+.timeline-title {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    white-space: nowrap;
+    position: absolute;
+    left: 10rem;
+    top: 45rem;
+}
+
+.timeline-title h2 {
+    font-size: 3rem;
+}
+
+.timeline-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-left: 10rem;
+}
+
+.flourish-cards {
+    width: 85%;
+    padding: 0 0 2rem;
+}
+
+.timeline-text {
+    width: 85%;
+}
+
 @media (max-width: 1024px) {
 
     h2,
@@ -384,9 +424,16 @@ section.presentation-section {
         font-size: 1rem;
     }
 
-    .header-container {
-        flex-direction: column;
-        align-items: center;
+    .logo-container {
+        padding-left: 5vw;
+    }
+
+    .logo {
+        max-width: 50%;
+    }
+
+    .logo-text {
+        font-size: 0.6rem;
     }
 
     .h-image-grid {
@@ -403,36 +450,30 @@ section.presentation-section {
 
     h2,
     h3 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     body {
-        font-size: 0.5rem;
+        font-size: 0.8rem;
     }
 
+    .header-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
 
     .logo-container {
-        width: 20vw;
-        gap: 1vh;
+        width: 30vw;
+        gap: 1vw;
+        padding-left: 0vw;
     }
 
     .logo-text {
-        font-size: 0.3rem;
-    }
-
-    .p-titre h2 {
-        font-size: 0.6rem;
-        text-align: center;
-    }
-
-    .p-text {
-        font-size: 0.5rem;
-        margin-top: 0.5rem;
-        line-height: 1.2;
-        max-width: 90%;
+        font-size: 0.2rem;
     }
 
     .h-image-grid {
+        padding-top: 1vh;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto;
         gap: 5px;
@@ -443,25 +484,56 @@ section.presentation-section {
         object-fit: cover;
     }
 
+    .menu-barre {
+        max-width: 5%;
+    }
+
     .popup-menu {
         width: 100%;
         padding: 3rem;
     }
 
     .popup-menu ul li a {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
+
 
     section.presentation-section {
         padding: 1rem;
     }
 
-    .presentation-text {
+    .p-titre h2 {
+        font-size: 0.8rem;
         text-align: center;
+    }
+
+    .p-text {
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+        line-height: 1.2;
+        max-width: 90%;
     }
 
     section.timeline-section {
         padding: 2rem;
+    }
+
+    .timeline-title {
+        left: 10vw;
+        top: 100vh;
+    }
+
+    .timeline-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content {
+        margin-left: 10vw;
+    }
+
+    .flourish-cards {
+        width: 100%;
+        padding: 0 0 0rem;
     }
 
 }
