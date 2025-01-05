@@ -413,6 +413,39 @@ section.timeline-section {
     width: 85%;
 }
 
+/* BUBBLE CHART */
+section.bubbles-section {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    height: 100vh;
+}
+
+.bubble-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bubble-title {
+    padding-bottom: 2%;
+    padding-left: 5%;
+}
+
+.bubble-text {
+    width: 40%;
+    align-self: center;
+}
+
+.bubble-text h3 {
+    padding: 0 0 2rem;
+}
+
+
+.flourish-bubble-chart {
+    width: 40%;
+}
+
+
 @media (max-width: 1024px) {
 
     h2,
@@ -429,7 +462,7 @@ section.timeline-section {
     }
 
     .logo {
-        max-width: 50%;
+        max-width: 70%;
     }
 
     .logo-text {
@@ -442,7 +475,8 @@ section.timeline-section {
     }
 
     .popup-menu {
-        width: 50vw;
+        padding-right: 5vw;
+        width: 30vw;
     }
 }
 
@@ -484,9 +518,6 @@ section.timeline-section {
         object-fit: cover;
     }
 
-    .menu-barre {
-        max-width: 5%;
-    }
 
     .popup-menu {
         width: 100%;
@@ -514,7 +545,8 @@ section.timeline-section {
         max-width: 90%;
     }
 
-    section.timeline-section {
+    section.timeline-section,
+    section.bubbles-section {
         padding: 2rem;
     }
 
@@ -536,4 +568,12 @@ section.timeline-section {
         padding: 0 0 0rem;
     }
 
+    .bubble-content {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .flourish-bubble-chart {
+        width: 50%;
+    }
 }
