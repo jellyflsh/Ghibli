@@ -16,24 +16,42 @@ function displaySongs() {
     const songContainer = document.querySelector('.song-container');
     songContainer.innerHTML = ''; // Réinitialiser le conteneur
 
-    // Diviser les chansons en deux colonnes
-    const columns = [[], []]; // Deux colonnes vides
-    songs.forEach((song, index) => {
-        columns[index % 2].push(song); // Répartir les chansons entre les colonnes
-    });
+    // Créer la première rangée (Top 1)
+    const top1Card = document.createElement('div');
+    top1Card.classList.add('song-card', 'top-1');
+    top1Card.innerHTML = `
+        <div class="ranking">#1</div>
+        <img src="${songs[0].img}" alt="Image de ${songs[0].title}">
+        <div class="song-info">
+            <h4>${songs[0].title}</h4>
+            <p>${songs[0].album}</p>
+            <span class="popularity">Popularité: ${songs[0].popularity}</span>
+        </div>
+    `;
+    const topRow = document.createElement('div');
+    topRow.classList.add('song-row');
+    topRow.appendChild(top1Card);
+    songContainer.appendChild(topRow);
 
-    // Créer les colonnes et ajouter les chansons
-    columns.forEach((columnSongs) => {
-        const column = document.createElement('div');
-        column.classList.add('song-column');
+    // Créer les autres rangées
+    const rows = [
+        [1, 5], // #2 et #6
+        [2, 6], // #3 et #7
+        [3, 7], // #4 et #8
+        [4, 8], // #5 et #9
+    ];
 
-        columnSongs.forEach((song, index) => {
+    rows.forEach((rowIndexes) => {
+        const row = document.createElement('div');
+        row.classList.add('song-row');
+
+        rowIndexes.forEach(index => {
+            const song = songs[index]; // Récupérer la chanson basée sur l'index
+            const rank = index + 1; // Rank corresponds to the song's position
             const songCard = document.createElement('div');
             songCard.classList.add('song-card');
-
-            // Contenu de la carte
             songCard.innerHTML = `
-                <div class="ranking">#${index + 1}</div>
+                <div class="ranking">#${rank}</div>
                 <img src="${song.img}" alt="Image de ${song.title}">
                 <div class="song-info">
                     <h4>${song.title}</h4>
@@ -41,11 +59,10 @@ function displaySongs() {
                     <span class="popularity">Popularité: ${song.popularity}</span>
                 </div>
             `;
-
-            column.appendChild(songCard);
+            row.appendChild(songCard);
         });
 
-        songContainer.appendChild(column);
+        songContainer.appendChild(row);
     });
 }
 

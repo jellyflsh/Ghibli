@@ -445,12 +445,143 @@ section.bubbles-section {
     width: 40%;
 }
 
+/*budget-revenue*/
+section.budget-revenue {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+    height: 100vh;
+}
+
+.budget-content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.budget-text {
+    width: 40%;
+    align-self: center;
+}
+
+.budget-text h3 {
+    padding: 0 0 2rem;
+}
+
+.flourish-chart {
+    width: 35%;
+}
+
+
+
+/*SONG Section*/
+section.top-song {
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+.song-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    padding: 3rem 5rem;
+    margin-bottom: 5vh;
+}
+
+.song-card.top-1 {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    max-width: 50vw;
+}
+
+/* Carte de chanson */
+.song-card {
+    display: flex;
+    gap: 1vw;
+    padding: 1rem;
+    width: 100%;
+    max-width: 30vw;
+    overflow: hidden;
+}
+
+.song-card:hover {
+    transform: none;
+}
+
+.song-info h4 {
+    font-size: 1.2rem;
+}
+
+.song-info p {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.popularity {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 200;
+}
+
+.ranking {
+    font-size: 2rem;
+    left: 10px;
+    color: white;
+    padding: 1rem;
+}
+
+.song-card img {
+    width: 15%;
+    height: 15%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Disposition des rangées */
+.song-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permet à l'élément de passer à la ligne suivante si besoin */
+    gap: 2vh;
+    /* Espacement entre les cartes */
+    align-items: flex-start;
+    border-bottom: 0.05vh solid white;
+}
+
+.song-text {
+    width: 70%;
+}
+
+
+
+/* pied de page */
+.footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20%;
+    padding: 5%;
+    width: 100%;
+
+}
+
+
+
 
 @media (max-width: 1024px) {
 
-    h2,
+    h2 {
+        font-size: 1.5rem;
+    }
+
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     body {
@@ -466,7 +597,7 @@ section.bubbles-section {
     }
 
     .logo-text {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     .h-image-grid {
@@ -482,15 +613,19 @@ section.bubbles-section {
 
 @media (max-width: 768px) {
 
-    h2,
+    h2 {
+        font-size: 1rem;
+    }
+
     h3 {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     body {
-        font-size: 0.8rem;
+        font-size: 1rem;
     }
 
+    /*header*/
     .header-container {
         flex-direction: column;
         padding: 1rem;
@@ -503,7 +638,7 @@ section.bubbles-section {
     }
 
     .logo-text {
-        font-size: 0.2rem;
+        font-size: 0.4rem;
     }
 
     .h-image-grid {
@@ -528,31 +663,34 @@ section.bubbles-section {
         font-size: 1rem;
     }
 
-
+    /*presentation*/
     section.presentation-section {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .p-titre h2 {
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: center;
     }
 
     .p-text {
-        font-size: 0.8rem;
+        font-size: 1rem;
         margin-top: 0.5rem;
         line-height: 1.2;
         max-width: 90%;
     }
 
+    /*timeline*/
     section.timeline-section,
-    section.bubbles-section {
-        padding: 2rem;
+    section.bubbles-section,
+    section.budget-revenue,
+    section.top-song {
+        padding: 0.5rem;
     }
 
     .timeline-title {
-        left: 10vw;
-        top: 100vh;
+        left: 3vw;
+        top: 50vh;
     }
 
     .timeline-title h2 {
@@ -565,15 +703,77 @@ section.bubbles-section {
 
     .flourish-cards {
         width: 100%;
-        padding: 0 0 0rem;
+        padding: 0;
     }
 
+    .timeline-text {
+        width: 90%;
+    }
+
+    /*bubbles*/
     .bubble-content {
         flex-direction: column;
-        width: 100%;
+    }
+
+    .bubble-text {
+        width: 90%;
     }
 
     .flourish-bubble-chart {
-        width: 50%;
+        width: 90%;
+        align-self: center;
     }
+
+    /*budget*/
+    .budget-content {
+        flex-direction: column;
+    }
+
+    .budget-text {
+        width: 90%;
+        order: 0;
+        padding-bottom: 2vh;
+    }
+
+    .flourish-chart {
+        width: 90%;
+        align-self: center;
+        order: 1;
+    }
+
+    /*song*/
+    .song-container {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .song-card {
+        max-width: 90%;
+    }
+
+
+    .song-info h4 {
+        font-size: 1rem;
+    }
+
+    .song-info p {
+        font-size: 0.8rem;
+    }
+
+    .popularity {
+        font-size: 0.7rem;
+    }
+
+    .ranking {
+        font-size: 1.5rem;
+    }
+
+    /* Si tu veux que les rangées de chansons ne s'écrasent pas sur les petits écrans */
+    .song-row {
+        flex-direction: column;
+        /* Empile les éléments dans une seule colonne sur mobile */
+        align-items: center;
+        /* Centrer les éléments */
+    }
+
 }
