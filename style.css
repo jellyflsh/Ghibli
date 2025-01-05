@@ -9,7 +9,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Classe d'animation */
 .animation-class {
     animation: fadeIn 1s ease-in-out;
 }
@@ -61,7 +60,6 @@ h3 {
     color: #D6E6B2;
 }
 
-/* Header */
 header {
     position: relative;
     margin-bottom: 10rem;
@@ -277,7 +275,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 16vw;
+    width: 18vw;
     height: 100vh;
     background-color: #f2fbe0f2;
     display: flex;
@@ -289,13 +287,13 @@ header {
     z-index: 2;
 }
 
-/* Menu visible */
+/* ouverture */
 .popup-menu.open {
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Liste des liens */
+/* Sommaire */
 .popup-menu ul {
     list-style: none;
     padding: 0;
@@ -316,6 +314,19 @@ header {
 .popup-menu ul li a:hover {
     color: #BC4749;
 }
+
+.popup-menu ul li:last-child {
+    padding-top: 2vh;
+}
+
+.popup-menu ul li:last-child a {
+    color: #90BA78;
+}
+
+.popup-menu ul li:last-child a:hover {
+    color: #BC4749;
+}
+
 
 /* animation section */
 .presentation-section,
@@ -362,278 +373,95 @@ section.presentation-section {
     line-height: 1.5;
 }
 
-/* Timeline style */
-section.timeline-section {
-    display: flex;
-    justify-content: flex-start;
-    padding: 5rem;
-    height: 100vh;
-    background-color: #394032;
-}
-
-
-.timeline-title {
-    transform: rotate(-90deg);
-    transform-origin: left top;
-    white-space: nowrap;
-    position: absolute;
-    left: 10rem;
-    top: 45rem;
-}
-
-.timeline-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-left: 10rem;
-}
-
-.flourish-cards {
-    width: 85%;
-    padding: 0 0 2rem;
-}
-
-.timeline-text {
-    width: 85%;
-}
-
-
-/* BUBBLE CHART */
-section.bubbles-section {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-    height: 100vh;
-}
-
-.bubble-content {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.bubble-title {
-    padding-bottom: 2%;
-    padding-left: 5%;
-}
-
-.bubble-text {
-    width: 40%;
-    align-self: center;
-}
-
-.bubble-text h3 {
-    padding: 0 0 2rem;
-}
-
-
-.flourish-bubble-chart {
-    width: 40%;
-}
-
-
-/*budget-revenue*/
-section.budget-revenue {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem;
-}
-
-.budget-content {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.budget-text {
-    width: 40%;
-    align-self: center;
-}
-
-.budget-text h3 {
-    padding: 0 0 2rem;
-}
-
-.flourish-chart {
-    width: 40%;
-}
-
-
-
-
-
-
-section.top-song {
-    padding: 10rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.song-title {
-    padding-bottom: 5vh;
-}
-
-/* Conteneur principal des chansons */
-.song-container {
-    display: flex;
-    justify-content: space-between;
-    width: 75%;
-    margin: auto;
-    gap: 3vw;
-    padding-bottom: 5vh;
-}
-
-.song-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-}
-
-.song-card {
-    display: flex;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #BC4749;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    box-sizing: border-box;
-}
-
-.song-card img {
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 15px;
-}
-
-.song-info {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.song-info h4 {
-    font-size: 16px;
-    color: #ffffff;
-}
-
-.song-info p {
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.ranking {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-right: 1vw;
-    color: #BC4749;
-    background-color: #D6E6B2;
-    border-radius: 20px;
-    width: 30px;
-}
-
-.popularity {
-    text-align: center;
-    font-size: 14px;
-    color: #D6E6B2;
-    border-radius: 5px;
-    padding: 5px 10px;
-}
-
-.song-text {
-    width: 75%;
-}
-
-/* notre top spotify */
-section.bonus {
-    padding: 5rem;
-}
-
-.bonus-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.bonus-title {
-    width: 55vw;
-    text-align: center;
-    margin-bottom: 4vh;
-}
-
-.player-text {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.spotify-player {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1vh;
-}
-
-
-
-/* pied de page */
-.footer {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20%;
-    padding: 5%;
-    width: 100%;
-
-}
-
-
 @media (max-width: 1024px) {
+
+    h2,
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .h-image-grid {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
     }
 
-    .logo {
-        width: 150px;
+    .popup-menu {
+        width: 50vw;
     }
-
-    .logo-text {
-        font-size: 14px;
-    }
-
 }
 
 @media (max-width: 768px) {
-    .h-image-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    h2,
+    h3 {
+        font-size: 1rem;
     }
 
-    .logo {
-        width: 100px;
+    body {
+        font-size: 0.5rem;
+    }
+
+
+    .logo-container {
+        width: 20vw;
+        gap: 1vh;
     }
 
     .logo-text {
-        font-size: 9px;
+        font-size: 0.3rem;
     }
 
-    section.presentation {
-        padding: 3rem;
-    }
-
-    .p-text-container {
-        padding: 0 1rem;
+    .p-titre h2 {
+        font-size: 0.6rem;
+        text-align: center;
     }
 
     .p-text {
+        font-size: 0.5rem;
+        margin-top: 0.5rem;
+        line-height: 1.2;
         max-width: 90%;
-        font-size: 1rem;
     }
+
+    .h-image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .h-image-grid .image img {
+        object-fit: cover;
+    }
+
+    .popup-menu {
+        width: 100%;
+        padding: 3rem;
+    }
+
+    .popup-menu ul li a {
+        font-size: 0.8rem;
+    }
+
+    section.presentation-section {
+        padding: 1rem;
+    }
+
+    .presentation-text {
+        text-align: center;
+    }
+
+    section.timeline-section {
+        padding: 2rem;
+    }
+
 }

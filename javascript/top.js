@@ -1,4 +1,4 @@
-// Liste des chansons avec album, titre, popularité et image
+// Liste des chansons
 const songs = [
     { title: "Merry-Go-Round of Life", album: "FREEDOM PIANO STORIES 4", popularity: 66, img: "images/freedom.jpg" },
     { title: "The Flower Garden", album: "Howl's Moving Castle Soundtrack", popularity: 64, img: "images/hmcs.jpg" },
@@ -8,63 +8,46 @@ const songs = [
     { title: "A Walk in the Skies", album: "Howl's Moving Castle Soundtrack", popularity: 54, img: "images/hmcs.jpg" },
     { title: "The Sixth Station", album: "Spirited Away Soundtrack", popularity: 54, img: "images/sas.jpg" },
     { title: "Merry-Go-Round of Life", album: "A Symphonic Celebration", popularity: 53, img: "images/symphonic.jpg" },
-    { title: "Day Of The River", album: "Spirited Away Soundtrack", popularity: 53, img: "images/sas.jpg" },
-    { title: "In the Rain", album: "Howl's Moving Castle Soundtrack", popularity: 50, img: "images/hmcs.jpg" }
+    { title: "Day Of The River", album: "Spirited Away Soundtrack", popularity: 53, img: "images/sas.jpg" }
 ];
 
-const songContainer = document.querySelector('.song-container');
-
+// Fonction pour afficher les chansons
 function displaySongs() {
-    songContainer.innerHTML = ''; // Vider le conteneur avant de remplir
+    const songContainer = document.querySelector('.song-container');
+    songContainer.innerHTML = ''; // Réinitialiser le conteneur
 
     // Diviser les chansons en deux colonnes
-    const firstColumnSongs = songs.slice(0, 5); // 1er groupe de 5 chansons
-    const secondColumnSongs = songs.slice(5, 10); // 2ème groupe de 5 chansons
+    const columns = [[], []]; // Deux colonnes vides
+    songs.forEach((song, index) => {
+        columns[index % 2].push(song); // Répartir les chansons entre les colonnes
+    });
 
-    // Fonction pour créer une colonne
-    function createColumn(songsArray, startIndex) {
+    // Créer les colonnes et ajouter les chansons
+    columns.forEach((columnSongs) => {
         const column = document.createElement('div');
-        column.classList.add('song-column'); // Classe pour styliser chaque colonne
+        column.classList.add('song-column');
 
-        // Parcourir les chansons et construire les cartes
-        songsArray.forEach((song, index) => {
+        columnSongs.forEach((song, index) => {
             const songCard = document.createElement('div');
             songCard.classList.add('song-card');
 
-            // Utiliser l'index global (startIndex + index)
-            const globalIndex = startIndex + index + 1;
-
-            // Ajouter le contenu à la carte
+            // Contenu de la carte
             songCard.innerHTML = `
-                <div class="ranking">${globalIndex}</div>
-                <img src="${song.img}" alt="Image de la chanson">
+                <div class="ranking">#${index + 1}</div>
+                <img src="${song.img}" alt="Image de ${song.title}">
                 <div class="song-info">
                     <h4>${song.title}</h4>
                     <p>${song.album}</p>
-                </div>
-                <div class="popularity">
-                    <span>Popularité</span>
-                    ${song.popularity}
+                    <span class="popularity">Popularité: ${song.popularity}</span>
                 </div>
             `;
 
-            // Ajouter la carte à la colonne
             column.appendChild(songCard);
         });
 
-        // Ajouter la colonne au conteneur principal
         songContainer.appendChild(column);
-    }
-
-    // Créer la première colonne avec un index de départ 0
-    createColumn(firstColumnSongs, 0);
-
-    // Créer la deuxième colonne avec un index de départ 5
-    createColumn(secondColumnSongs, 5);
+    });
 }
-
-
 
 // Initialisation
 displaySongs();
-

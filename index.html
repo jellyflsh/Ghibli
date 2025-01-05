@@ -11,11 +11,10 @@
     <link rel="icon" type="image/png" href="images/kodama.png">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/aew7wsh.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Signika:wght@300..700&family=Unbounded:wght@200..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Unbounded:wght@200..900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -45,12 +44,13 @@
             <div class="popup-menu">
                 <ul>
                     <li><a href="#home" onclick="changeBackgroundColor('#ffffff')">Accueil</a></li>
-                    <li><a href="#timeline">Chronologie</a></li>
-                    <li><a href="#genres" onclick="changeBackgroundColor('#394032')">Par genres</a></li>
+                    <li><a href="#timeline">Chronologie des films</a></li>
+                    <li><a href="#genres" onclick="changeBackgroundColor('#394032')">Principaux genres</a></li>
                     <li><a href="#budget-revenue" onclick="changeBackgroundColor('#394032')">Budgets et revenues</a>
                     </li>
                     <li><a href="#color-palette" onclick="changeBackgroundColor('#394032')">Palette de Couleur</a></li>
                     <li><a href="#spotify" onclick="changeBackgroundColor('#394032')">Classement Spotify</a></li>
+                    <li><a href="csv/csv.zip" download>Télécharger les données</a></li>
                 </ul>
             </div>
         </div>
@@ -74,8 +74,8 @@
                     <p>
                         Pour ce faire nous avons récupéré des jeux de données provenant de Wikidata, d'une API qui
                         rescencent tous les films Ghibli, ainsi que de l'API de Spotify pour les bandes sonores
-                        des films.<br>Enfin, nous avons conçu et intégré des graphiques interactifs pour
-                        visualiser ces données<br>à l'aide de Flourish et de JavaScript.
+                        des films. Enfin, nous avons conçu et intégré des graphiques interactifs pour
+                        visualiser ces données à l'aide de Flourish et de JavaScript.
                     </p>
                 </div>
             </div>
@@ -83,7 +83,7 @@
 
         <section class="timeline-section" id="timeline">
             <div class="timeline-title">
-                <h2 style="font-size: 3rem">Chronologie des films</h2>
+                <h2>Chronologie des films</h2>
             </div>
             <div class="timeline-content">
                 <div class="flourish-embed flourish-cards" data-src="visualisation/20488810">
@@ -101,13 +101,12 @@
                         de ses films majeurs, de sa création à aujourd’hui.</p>
                 </div>
         </section>
-
-        </section>
+        <!--
 
         <section class="bubbles-section" id="genres">
             <div class="bubble-content">
                 <div class="bubble-text">
-                    <h2>Les Principaux genres</h2>
+                    <h2>Les principaux genres</h2>
                     <h3>présents dans les films Ghibli</h3>
                     <p> Les films Ghibli sont avant tout ancrés dans le genre de la Fantasy, un univers où
                         l'imaginaire et
@@ -208,8 +207,10 @@
         </div>
     </footer>
 
-    <script src="javascript/top.js"></script>
-    <script src="javascript/main.js"></script>
+-->
+
+        <script src="javascript/top.js"></script>
+        <script src="javascript/main.js"></script>
 </body>
 
 </html>
