@@ -640,11 +640,14 @@ section.top-song {
 section.bonus {
     height: 100vh;
     padding: 5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .bonus-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
