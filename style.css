@@ -425,10 +425,6 @@ section.bubbles-section {
     justify-content: space-evenly;
 }
 
-.bubble-title {
-    padding-bottom: 2%;
-    padding-left: 5%;
-}
 
 .bubble-text {
     width: 40%;
@@ -581,11 +577,8 @@ section.top-song {
     padding: 1rem;
     width: 100%;
     max-width: 30vw;
+    height: auto;
     overflow: hidden;
-}
-
-.song-card:hover {
-    transform: none;
 }
 
 .song-info h4 {
@@ -811,6 +804,9 @@ section.bonus {
 
 }
 
+
+
+
 @media (max-width: 600px) {
 
     h2 {
@@ -828,6 +824,10 @@ section.bonus {
 
 
     /*header*/
+    header {
+        height: 20vh;
+    }
+
     .header-container {
         flex-direction: column;
         padding: 1rem;
@@ -845,8 +845,7 @@ section.bonus {
 
     .h-image-grid {
         padding-top: 1vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: repeat(0, 1fr);
         gap: 5px;
         max-width: 100%;
     }
@@ -928,6 +927,11 @@ section.bonus {
         flex-direction: column;
     }
 
+
+    .bubble-text h3 {
+        padding: 0 0 1rem;
+    }
+
     .bubble-text {
         width: 90%;
     }
@@ -941,6 +945,11 @@ section.bonus {
     .budget-content {
         flex-direction: column;
     }
+
+    .budget-text h3 {
+        padding: 0 0 1rem;
+    }
+
 
     .budget-text {
         width: 90%;
@@ -979,8 +988,8 @@ section.bonus {
     }
 
     .color {
-        width: 5vw;
-        height: 5vh;
+        width: 8vw;
+        height: 8vh;
     }
 
 
@@ -1008,14 +1017,22 @@ section.bonus {
     }
 
     .song-card.top-1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 50vw;
+    }
+
+
+    .song-card.top-1 {
         justify-content: flex-start;
         max-width: 100%;
     }
 
     .song-card img {
-        width: 15%;
-        height: 15%;
-        margin-right: 3vw;
+        width: 20vw;
+        height: auto;
+        margin-right: 5vw;
     }
 
     .song-info h4 {
@@ -1034,12 +1051,13 @@ section.bonus {
         font-size: 1.5rem;
     }
 
-    /* Si tu veux que les rangées de chansons ne s'écrasent pas sur les petits écrans */
+    .song-card.top-1 .ranking {
+        font-size: 1.5rem;
+    }
+
     .song-row {
         flex-direction: column;
-        /* Empile les éléments dans une seule colonne sur mobile */
         align-items: center;
-        /* Centrer les éléments */
     }
 
     .song-text {
