@@ -1,4 +1,3 @@
-// Liste des chansons
 const songs = [
     { title: "Merry-Go-Round of Life", album: "FREEDOM PIANO STORIES 4", popularity: 66, img: "content/images/freedom.jpg" },
     { title: "The Flower Garden", album: "Howl's Moving Castle Soundtrack", popularity: 64, img: "content/images/hmcs.jpg" },
@@ -11,15 +10,12 @@ const songs = [
     { title: "Day Of The River", album: "Spirited Away Soundtrack", popularity: 53, img: "content/images/sas.jpg" }
 ];
 
-// Fonction pour afficher les chansons
 function displaySongs() {
     const songContainer = document.querySelector('.song-container');
-    songContainer.innerHTML = ''; // Réinitialiser le conteneur
+    songContainer.innerHTML = '';
 
-    // Trier les chansons par popularité décroissante
     const sortedSongs = [...songs].sort((a, b) => b.popularity - a.popularity);
 
-    // Créer la première rangée (Top 1)
     const top1Card = document.createElement('div');
     top1Card.classList.add('song-card', 'top-1');
     top1Card.innerHTML = `
@@ -36,7 +32,6 @@ function displaySongs() {
     topRow.appendChild(top1Card);
     songContainer.appendChild(topRow);
 
-    // Créer les autres rangées
     const rows = [
         [1, 2],
         [3, 4],
@@ -50,8 +45,8 @@ function displaySongs() {
 
         rowIndexes.forEach(index => {
             if (index < sortedSongs.length) {
-                const song = sortedSongs[index]; // Récupérer la chanson triée par popularité
-                const rank = index + 1; // Rang réel
+                const song = sortedSongs[index];
+                const rank = index + 1;
                 const songCard = document.createElement('div');
                 songCard.classList.add('song-card');
                 songCard.innerHTML = `
@@ -71,7 +66,6 @@ function displaySongs() {
     });
 }
 
-// Initialisation
 document.addEventListener('DOMContentLoaded', () => {
     displaySongs();
 });

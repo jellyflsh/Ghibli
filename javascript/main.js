@@ -1,24 +1,23 @@
-let lastScrollY = window.scrollY; // Position initiale du scroll
-const menuBarre = document.querySelector('.menu-barre'); // Bouton hamburger
-const popupMenu = document.querySelector('.popup-menu'); // Menu popup
-let isMenuOpen = false; // État du menu (ouvert/fermé)
+let lastScrollY = window.scrollY;
+const menuBarre = document.querySelector('.menu-barre');
+const popupMenu = document.querySelector('.popup-menu');
+let isMenuOpen = false;
 
-// Fonction pour changer la couleur de fond du body en fonction de la section
+
 function changeBackgroundColor(sectionId) {
     const sectionColors = {
-        'presentation': '#ffffff', // Couleur de la section présentation
-        'timeline': '#394032', // Couleur de la section timeline
+        'presentation': '#ffffff',
+        'timeline': '#394032',
     };
 
     const color = sectionColors[sectionId];
     if (color) {
         document.body.style.backgroundColor = color;
-        // Sauvegarde la couleur dans le localStorage
         localStorage.setItem('backgroundColor', color);
     }
 }
 
-// Fonction pour gérer le scroll fluide
+
 function handleScroll() {
     const currentScrollY = window.scrollY;
 
@@ -33,17 +32,17 @@ function handleScroll() {
     lastScrollY = currentScrollY;
 }
 
-// Fonction de gestion du clic sur le bouton du menu
+
 function toggleMenu() {
     isMenuOpen = !isMenuOpen;
     menuBarre.classList.toggle('open');
     popupMenu.classList.toggle('open');
 }
 
-// Observer uniquement les sections Présentation et Timeline
+
 const sectionsToAnimate = document.querySelectorAll('.presentation-section, .timeline-section');
 
-// Création de l'observateur pour détecter les sections visibles
+
 const observer = new IntersectionObserver((entries) => {
     let isAnySectionVisible = false;
 
@@ -53,38 +52,31 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             isAnySectionVisible = true;
 
-            // Ajoute la classe 'visible' pour l'animation si elle ne l'a pas déjà
             if (!section.classList.contains('visible')) {
                 section.classList.add('visible');
             }
 
-            changeBackgroundColor(section.id); // Changer la couleur de fond
+            changeBackgroundColor(section.id);
         } else {
-            // Supprimez cette ligne pour empêcher la réinitialisation de la visibilité :
-            // section.classList.remove('visible');
+
         }
     });
 
-    // Si aucune section n'est visible (par exemple, en haut de la page), appliquer Présentation
     if (!isAnySectionVisible && window.scrollY < 50) {
         changeBackgroundColor('presentation');
     }
-}, { threshold: 0.5 }); // Déclenche à 50% de la section visible
+}, { threshold: 0.5 });
 
-// Observer les sections Présentation et Timeline
 sectionsToAnimate.forEach(section => observer.observe(section));
 
-// Écouteurs d'événements pour scroll et menu
 window.addEventListener('scroll', handleScroll);
 menuBarre.addEventListener('click', toggleMenu);
 
-// Appliquer la couleur de fond sauvegardée au rechargement de la page
 window.onload = function () {
     const savedColor = localStorage.getItem('backgroundColor');
     if (savedColor) {
         document.body.style.backgroundColor = savedColor;
     } else {
-        // Si aucune couleur n'est sauvegardée, on applique celle de la section Présentation par défaut
         changeBackgroundColor('presentation');
     }
 };
