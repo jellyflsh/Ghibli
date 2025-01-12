@@ -480,7 +480,7 @@ section.palette-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     background-image: url('content/images/background2.jpeg');
     background-size: cover;
     background-position: center;
@@ -503,7 +503,10 @@ section.palette-section .palette,
 section.palette-section .color-title {
     position: relative;
     z-index: 1;
-    /* Place le contenu au-dessus de l'overlay */
+}
+
+.color-title {
+    margin-bottom: 5vh;
 }
 
 .color-palette {
@@ -567,11 +570,11 @@ section.top-song {
 .song-card.top-1 {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: center;
     max-width: 50vw;
 }
 
-/* Carte de chanson */
+
 .song-card {
     display: flex;
     gap: 1vw;
@@ -607,6 +610,10 @@ section.top-song {
     padding: 1rem;
 }
 
+.song-card.top-1 .ranking {
+    font-size: 3rem;
+}
+
 .song-card img {
     width: 15%;
     height: 15%;
@@ -614,12 +621,10 @@ section.top-song {
     object-fit: cover;
 }
 
-/* Disposition des rangées */
 .song-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 2vh;
-    /* Espacement entre les cartes */
     align-items: flex-start;
     border-bottom: 0.05vh solid white;
 }
@@ -627,6 +632,7 @@ section.top-song {
 .song-text {
     width: 70%;
 }
+
 
 
 
@@ -669,7 +675,6 @@ section.bonus {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 20%;
     padding: 5%;
     width: 100%;
 
@@ -705,8 +710,7 @@ section.bonus {
     }
 
     .h-image-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(0, 1fr);
     }
 
     .popup-menu {
@@ -894,6 +898,7 @@ section.bonus {
         margin: 50vh 0;
     }
 
+
     .timeline-title {
         left: 3vw;
         top: 50vh;
@@ -948,6 +953,35 @@ section.bonus {
         align-self: center;
         order: 1;
     }
+
+    /* COLOR PALETTE */
+    section.palette-section {
+        padding: 0.5rem;
+    }
+
+    .color-title {
+        margin-bottom: 5vh;
+    }
+
+    .color-palette {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .palette {
+        gap: 5vw;
+        margin-bottom: 0vh;
+    }
+
+    .color {
+        width: 5vw;
+        height: 5vh;
+    }
+
+
+
 
     /* SONG Section */
 

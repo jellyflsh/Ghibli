@@ -38,10 +38,10 @@ function displaySongs() {
 
     // Créer les autres rangées
     const rows = [
-        [1, 5], // #2 et #6
-        [2, 6], // #3 et #7
-        [3, 7], // #4 et #8
-        [4, 8], // #5 et #9
+        [1, 2],
+        [3, 4],
+        [5, 6],
+        [7, 8],
     ];
 
     rows.forEach((rowIndexes) => {
