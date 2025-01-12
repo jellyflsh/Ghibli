@@ -3,7 +3,6 @@ const menuBarre = document.querySelector('.menu-barre');
 const popupMenu = document.querySelector('.popup-menu');
 let isMenuOpen = false;
 
-
 function changeBackgroundColor(sectionId) {
     const sectionColors = {
         'presentation': '#ffffff',
@@ -17,31 +16,27 @@ function changeBackgroundColor(sectionId) {
     }
 }
 
-
 function handleScroll() {
     const currentScrollY = window.scrollY;
 
     if (!isMenuOpen) {
         if (currentScrollY > lastScrollY) {
-            menuBarre.classList.add('hidden');
+            menuBarre?.classList.add('hidden');
         } else {
-            menuBarre.classList.remove('hidden');
+            menuBarre?.classList.remove('hidden');
         }
     }
 
     lastScrollY = currentScrollY;
 }
 
-
 function toggleMenu() {
     isMenuOpen = !isMenuOpen;
-    menuBarre.classList.toggle('open');
-    popupMenu.classList.toggle('open');
+    menuBarre?.classList.toggle('open');
+    popupMenu?.classList.toggle('open');
 }
 
-
 const sectionsToAnimate = document.querySelectorAll('.presentation-section, .timeline-section');
-
 
 const observer = new IntersectionObserver((entries) => {
     let isAnySectionVisible = false;
@@ -57,8 +52,6 @@ const observer = new IntersectionObserver((entries) => {
             }
 
             changeBackgroundColor(section.id);
-        } else {
-
         }
     });
 
@@ -70,7 +63,7 @@ const observer = new IntersectionObserver((entries) => {
 sectionsToAnimate.forEach(section => observer.observe(section));
 
 window.addEventListener('scroll', handleScroll);
-menuBarre.addEventListener('click', toggleMenu);
+menuBarre?.addEventListener('click', toggleMenu);
 
 window.onload = function () {
     const savedColor = localStorage.getItem('backgroundColor');
