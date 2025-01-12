@@ -238,7 +238,7 @@ header {
 .bar {
     width: 100%;
     height: 4px;
-    -color: #BC4749;
+    background-color: #BC4749;
     border-radius: 2px;
     cursor: pointer;
     transition: transform 0.5s ease, opacity 0.5s ease;
@@ -277,7 +277,7 @@ header {
     right: 0;
     width: 18vw;
     height: 100vh;
-    -color: #f2fbe0f2;
+    background-color: #f2fbe0f2;
     display: flex;
     flex-direction: column;
     text-align: right;
@@ -326,7 +326,6 @@ header {
 .popup-menu ul li:last-child a:hover {
     color: #BC4749;
 }
-
 
 /* animation section */
 .presentation-section,
