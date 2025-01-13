@@ -345,7 +345,7 @@ header {
 section.presentation-section {
     display: flex;
     justify-content: center;
-    padding: 5rem;
+    padding: 5%;
     height: 100vh;
 }
 
@@ -365,7 +365,7 @@ section.presentation-section {
 }
 
 .p-text {
-    margin-top: 2rem;
+    margin-top: 2vh;
     max-width: 70%;
     text-align: center;
     line-height: 1.5;
@@ -375,7 +375,7 @@ section.presentation-section {
 section.timeline-section {
     display: flex;
     justify-content: flex-start;
-    padding: 5rem;
+    padding: 5%;
     height: 100vh;
     -color: #394032;
 }
@@ -415,7 +415,7 @@ section.timeline-section {
 section.bubbles-section {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 5%;
     height: 100vh;
 }
 
@@ -443,7 +443,7 @@ section.bubbles-section {
 section.budget-revenue {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 5%;
     height: 100vh;
 }
 
@@ -470,7 +470,7 @@ section.budget-revenue {
 
 /* COLOR PALETTE */
 section.palette-section {
-    padding: 5rem;
+    padding: 5%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -544,7 +544,7 @@ section.palette-section .color-title {
 
 /*SONG Section*/
 section.top-song {
-    padding: 5rem;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -558,7 +558,7 @@ section.top-song {
     flex-direction: column;
     gap: 20px;
     width: 80%;
-    padding: 3rem 5rem;
+    padding: 3% 5%;
     margin-bottom: 5vh;
 }
 
@@ -573,7 +573,7 @@ section.top-song {
 .song-card {
     display: flex;
     gap: 1vw;
-    padding: 1rem;
+    padding: 1%;
     width: 100%;
     max-width: 30vw;
     height: auto;
@@ -631,7 +631,7 @@ section.top-song {
 /* notre top spotify */
 section.bonus {
     height: 100vh;
-    padding: 5rem;
+    padding: 5%;
     display: flex;
     justify-content: center;
 }
@@ -722,7 +722,7 @@ section.bonus {
 
     .p-text {
         font-size: 1rem;
-        margin-top: 1rem;
+        margin-top: 1%;
         line-height: 1.2;
         max-width: 90%;
     }
@@ -734,7 +734,7 @@ section.bonus {
     section.palette-section,
     section.top-song,
     section.bonus {
-        padding: 2rem;
+        padding: 2%;
     }
 
     .timeline-title {
@@ -762,7 +762,7 @@ section.bonus {
     /*TOP SPOTIFY*/
     .song-container {
         width: 90%;
-        padding: 0 0rem;
+        padding: 0 0%;
         margin: 5vh 0;
     }
 
@@ -830,7 +830,7 @@ section.bonus {
 
     .header-container {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1%;
     }
 
     .logo-container {
@@ -857,7 +857,7 @@ section.bonus {
 
     .popup-menu {
         width: 100%;
-        padding: 3rem;
+        padding: 3%;
     }
 
     .popup-menu ul li a {
@@ -866,7 +866,7 @@ section.bonus {
 
     /*presentation*/
     section.presentation-section {
-        padding: 0.5rem;
+        padding: 0.5%;
     }
 
     .p-titre h2 {
@@ -876,7 +876,7 @@ section.bonus {
 
     .p-text {
         font-size: 1rem;
-        margin-top: 0.5rem;
+        margin-top: 0.5%;
         line-height: 1.2;
         max-width: 90%;
     }
@@ -886,12 +886,12 @@ section.bonus {
     section.bubbles-section,
     section.top-song,
     section.bonus {
-        padding: 0.5rem;
+        padding: 0.5%;
     }
 
 
     section.budget-revenue {
-        padding: 0.5rem;
+        padding: 0.5%;
         margin-bottom: 20vh;
     }
 
@@ -929,7 +929,7 @@ section.bonus {
 
 
     .bubble-text h3 {
-        padding: 0 0 1rem;
+        padding: 0 0 1%;
     }
 
     .bubble-text {
@@ -947,7 +947,7 @@ section.bonus {
     }
 
     .budget-text h3 {
-        padding: 0 0 1rem;
+        padding: 0 0 1%;
     }
 
 
@@ -967,7 +967,7 @@ section.bonus {
 
     /* COLOR PALETTE */
     section.palette-section {
-        padding: 0.5rem;
+        padding: 0.5%;
         margin-bottom: 0vh;
     }
 
